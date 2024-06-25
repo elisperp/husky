@@ -74,7 +74,7 @@ int main(int argc, char** argv)
 	
         speed.linear.x = 0.15; 
 
-        //pub.publish(speed);
+        pub.publish(speed);
 
         if (dist < 1.0 && i < points.size() - 1)
         {
@@ -85,7 +85,7 @@ int main(int argc, char** argv)
         {
             speed.linear.x = 0;
             speed.angular.z = 0;
-            //pub.publish(speed);
+            pub.publish(speed);
             break;
         }
 
