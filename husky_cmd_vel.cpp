@@ -48,7 +48,6 @@ int main(int argc, char** argv)
 
     while (ros::ok())
     {
-
         double Dx = points[i].first - pose_msg.pose.pose.position.x;
         double Dy = points[i].second - pose_msg.pose.pose.position.y;
 
