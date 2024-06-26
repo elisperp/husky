@@ -50,7 +50,6 @@
       --Icp/PointToPlaneK 10
       --Icp/MaxTranslation 1"/>
 
-
     <!-- If icp_odometry is used -->
     <!-- <arg if="$(arg icp_odometry)" name="icp_odometry" value="true" /> -->
     <arg if="$(arg icp_odometry)" name="odom_guess_frame_id" value="odom" />
@@ -110,4 +109,3 @@
   <include if="$(arg navigation)" file="$(find husky_navigation)/launch/move_base.launch" />
 
 </launch>
-
