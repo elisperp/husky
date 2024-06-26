@@ -24,8 +24,6 @@ int main(int argc, char** argv)
     ros::Rate rate(10.0);
     std::vector<std::pair<int, int>> points = {{10,0}, {20,0}, {30,0}, {40,0}, {50,0}, {67,0}, {67,18}, {50,18}, {40,18}, {30,18}, {20,18}, {10,18}, {0,18}, {0, 10}, {0, 0}};
     
-    sleep(5);
-    
     for (int i = 0; i < points.size(); i++) 
     {
     	geometry_msgs::PoseStamped goal;
