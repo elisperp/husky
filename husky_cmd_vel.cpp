@@ -2,11 +2,8 @@
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <nav_msgs/Odometry.h>
-#include <tf/transform_datatypes.h>
-#include <tf2_msgs/TFMessage.h>
 #include <cmath>
 #include <vector>
-#include <iostream>
 
 std::vector<std::pair<double, double>> positions;
 
@@ -59,10 +56,6 @@ int main(int argc, char** argv)
         Dtheta = normalize(Dtheta);
 
         double dist = std::sqrt(Dx * Dx + Dy * Dy);
-
-        std::cout<< "x: "<< pose_msg.pose.pose.position.x << std::endl;
-        std::cout << "y: "<< pose_msg.pose.pose.position.y << std::endl;
-	std::cout << "z: "<< theta << std::endl;
 
 	if (Dtheta < 0.4) 
 	{ 
