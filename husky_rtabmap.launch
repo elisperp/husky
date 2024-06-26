@@ -83,7 +83,6 @@
     <arg name="localization"         value="$(arg localization)"/>        
         <arg if="$(arg localization)" name="args" value="Reg/Force3DoF $(arg slam2d) $(arg lidar_args) --Mem/IncrementalMemory true" />
         <arg unless="$(arg localization)" name="args" value="Reg/Force3DoF $(arg slam2d) $(arg lidar_args) -d"/>
-        <!--arg name="rtabmap_args"       value="delete_db_on_start true"/-->
         <arg name="depth_topic"        value="/$(arg camera)/aligned_depth_to_color/image_raw"/>
         <arg name="frame_id"           value="base_link"/>
         <arg name="visual_odometry"    value="false"/>
