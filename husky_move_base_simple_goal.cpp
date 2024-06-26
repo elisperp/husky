@@ -4,7 +4,6 @@
 #include <tf/transform_datatypes.h>
 #include <cmath>
 #include <vector>
-#include <iostream>
 #include <tf/transform_broadcaster.h>
 
 nav_msgs::Odometry pose_msg;
