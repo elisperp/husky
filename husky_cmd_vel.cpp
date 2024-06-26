@@ -22,7 +22,6 @@ void odomCallback(const nav_msgs::Odometry::ConstPtr& data)
     double roll, pitch, yaw;
     tf::Matrix3x3(rot_q).getRPY(roll,pitch,yaw);
     theta = yaw;
-    
 }
 
 double normalize(double angle)
