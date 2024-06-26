@@ -4,6 +4,7 @@
 #include <nav_msgs/Odometry.h>
 #include <cmath>
 #include <vector>
+#include <tf/transform_datatypes.h>
 
 std::vector<std::pair<double, double>> positions;
 
