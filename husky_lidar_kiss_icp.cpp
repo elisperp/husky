@@ -37,7 +37,6 @@ void odomCallback(const nav_msgs::Odometry::ConstPtr& data)
 
 }
 
-
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "speed_controller");
@@ -73,7 +72,7 @@ int main(int argc, char** argv)
         speed.angular.z = 0.5 * Dtheta;
         speed.linear.x = 0.1 * dist;
 
-        //pubCmdVel.publish(speed);
+        pubCmdVel.publish(speed);
 
         if (dist < 0.3 && i < points.size() - 1)
         {
@@ -84,7 +83,7 @@ int main(int argc, char** argv)
         {
             speed.linear.x = 0;
             speed.angular.z = 0;
-            //pubCmdVel.publish(speed);
+            pubCmdVel.publish(speed);
             break;
         }
         
@@ -92,8 +91,6 @@ int main(int argc, char** argv)
 	ros::spinOnce();
 	rate.sleep();
     }
-
-  
 
     return 0;
 }
