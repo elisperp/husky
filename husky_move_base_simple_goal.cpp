@@ -18,7 +18,7 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "goal_publisher");
     ros::NodeHandle nh;
 
-    ros::Subscriber subOdom = nh.subscribe("/odometry_node/odometry", 10, odomCallback);
+    ros::Subscriber subOdom = nh.subscribe("/odometry/filtered", 10, odomCallback);
     ros::Publisher pub = nh.advertise<geometry_msgs::PoseStamped>("/move_base_simple/goal", 10);
     ros::Rate rate(10.0);
     std::vector<std::pair<int, int>> points = {{20,0}, {40,0}, {67,0}, {67,20}, {40,20}, {20,20}, {0,20}, {0, 0}};
